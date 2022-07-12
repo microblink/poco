@@ -101,7 +101,7 @@ set_target_properties(Foundation
 )
 
 if(POCO_UNBUNDLED)
-	target_link_libraries(Foundation PUBLIC Pcre::Pcre ZLIB::ZLIB)
+    target_link_libraries(Foundation PUBLIC PCRE::PCRE ZLIB::ZLIB)
 	target_compile_definitions(Foundation PUBLIC POCO_UNBUNDLED)
 endif(POCO_UNBUNDLED)
 
