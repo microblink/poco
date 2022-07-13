@@ -105,14 +105,9 @@ void SSLManager::shutdown()
 }
 
 
-namespace
-{
-	static Poco::SingletonHolder<SSLManager> singleton;
-}
-
-
 SSLManager& SSLManager::instance()
 {
+	static Poco::SingletonHolder<SSLManager> singleton;
 	return *singleton.get();
 }
 
